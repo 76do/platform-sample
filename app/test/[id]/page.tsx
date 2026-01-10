@@ -4,12 +4,17 @@ import Image from "next/image";
 import Sleep from "./_component/sleep";
 import Link from "next/link";
 
-export default async function Home() {
+export default async function Home({
+  params,
+}: {
+  params: Promise<{ id: string }>;
+}) {
+  const { id } = await params;
   return (
     <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
       <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
         <Suspense fallback={<div>Loading...</div>}>
-          <Sleep />
+          <Sleep id={id} />
         </Suspense>
         <Image
           className="dark:invert"
@@ -75,4 +80,8 @@ export default async function Home() {
       </main>
     </div>
   );
+}
+
+export async function generateStaticParams() {
+	return [{ id: '1' }];
 }
