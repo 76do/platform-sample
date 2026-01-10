@@ -1,7 +1,7 @@
 import { cacheTag } from "next/cache";
 
 export default async function Sleep({ id }: { id: string }) {
-  "use cache remote";
+  "use cache: remote";
   cacheTag(`tag-${id}`);
 
   await new Promise((resolve) => setTimeout(resolve, 10000));
