@@ -77,6 +77,8 @@ export default async function Home({
 				<Link href="/test/3">Go to /test/3</Link>
 				<Link href="/test/4">Go to /test/4</Link>
 				<Link href="/test/5">Go to /test/5</Link>
+				<Link href="/test/6">Go to /test/6</Link>
+				<Link href="/test/7">Go to /test/7</Link>
       </main>
     </div>
   );
