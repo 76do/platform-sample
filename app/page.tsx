@@ -1,16 +1,10 @@
-//import { cacheTag } from 'next/cache'
-import { Suspense } from "react";
 import Image from "next/image";
-import Sleep from "./_component/sleep";
 import Link from "next/link";
 
 export default async function Home() {
   return (
     <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
       <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Suspense fallback={<div>Loading...</div>}>
-          <Sleep />
-        </Suspense>
         <Image
           className="dark:invert"
           src="/next.svg"
@@ -66,12 +60,12 @@ export default async function Home() {
             Documentation
           </a>
         </div>
-				<Link href="/">Go to /</Link>
-				<Link href="/test/1">Go to /test/1</Link>
-				<Link href="/test/2">Go to /test/2</Link>
-				<Link href="/test/3">Go to /test/3</Link>
-				<Link href="/test/4">Go to /test/4</Link>
-				<Link href="/test/5">Go to /test/5</Link>
+        <Link href="/">Go to /</Link>
+        <Link href="/test/1">Go to /test/1</Link>
+        <Link href="/test/2">Go to /test/2</Link>
+        <Link href="/test/3">Go to /test/3</Link>
+        <Link href="/test/4">Go to /test/4</Link>
+        <Link href="/test/5">Go to /test/5</Link>
       </main>
     </div>
   );
