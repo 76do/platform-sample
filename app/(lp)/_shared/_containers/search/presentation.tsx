@@ -1,8 +1,14 @@
+"use client";
+import { useEffect } from "react";
 export default function Presentation({
   results,
 }: {
   results: { name: string; url: string }[];
 }) {
+	useEffect(() => {
+		const referrer = document.referrer;
+		console.log("Referrer URL:", referrer);
+	}, []);
   return (
     <div>
       <h1>Pokémon List</h1>
